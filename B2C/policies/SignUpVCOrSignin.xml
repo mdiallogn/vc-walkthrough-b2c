@@ -1,12 +1,12 @@
 <TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" 
-TenantId="yourtenant.onmicrosoft.com" 
+TenantId="litware369b2c.onmicrosoft.com" 
 PolicyId="B2C_1A_VC_susi_issuevc" 
-PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_VC_susi" 
+PublicPolicyUri="http://litware369b2c.onmicrosoft.com/B2C_1A_VC_susi" 
 DeploymentMode="Development" UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights" 
 >
   <BasePolicy>
-    <TenantId>yourtenant.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_VC_TrustFrameworkExtensions</PolicyId>
+    <TenantId>litware369b2c.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkExtensionsVC</PolicyId>
   </BasePolicy>
   <UserJourneys>
     <!-- add VC as a Claims Provider -->
@@ -24,7 +24,7 @@ DeploymentMode="Development" UserJourneyRecorderEndpoint="urn:journeyrecorder:ap
           </ClaimsExchanges>
         </OrchestrationStep>
         <!-- If it's a new user, pass the claims to the VC sample to prepare for issuing a VC -->
-        <OrchestrationStep Order="7" Type="ClaimsExchange">
+        <OrchestrationStep Order="2" Type="ClaimsExchange">
           <Preconditions>
             <Precondition Type="ClaimsExist" ExecuteActionsIf="false">
               <Value>newUser</Value>
@@ -36,7 +36,7 @@ DeploymentMode="Development" UserJourneyRecorderEndpoint="urn:journeyrecorder:ap
           </ClaimsExchanges>
         </OrchestrationStep>
         <!-- If it's a new user, show the QR code to the user in order to issue the VC -->
-        <OrchestrationStep Order="8" Type="ClaimsExchange">
+        <OrchestrationStep Order="3" Type="ClaimsExchange">
           <Preconditions>
             <Precondition Type="ClaimsExist" ExecuteActionsIf="false">
               <Value>newUser</Value>
@@ -47,7 +47,7 @@ DeploymentMode="Development" UserJourneyRecorderEndpoint="urn:journeyrecorder:ap
             <ClaimsExchange Id="UXVCIssuanceClaims" TechnicalProfileReferenceId="SelfAsserted-VCIssuance" />
           </ClaimsExchanges>
         </OrchestrationStep>        
-        <OrchestrationStep Order="9" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
+        <OrchestrationStep Order="4" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
       </OrchestrationSteps>
     </UserJourney>
   </UserJourneys>

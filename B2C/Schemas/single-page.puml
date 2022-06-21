@@ -1,0 +1,5 @@
+@startuml
+
+actor "Client" as client
+component "Server" as server
+@enduml

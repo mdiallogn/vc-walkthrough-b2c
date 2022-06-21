@@ -1,7 +1,7 @@
-<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="litware369b2c.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkLocalizationVC" PublicPolicyUri="http://litware369b2c.onmicrosoft.com/B2C_1A_TrustFrameworkLocalizationVC" TenantObjectId="cbf80679-8d13-4ac7-a5de-a4c1d69bd5d2">
+<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="litware369b2c.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkLocalization" PublicPolicyUri="http://litware369b2c.onmicrosoft.com/B2C_1A_TrustFrameworkLocalization" TenantObjectId="cbf80679-8d13-4ac7-a5de-a4c1d69bd5d2">
   <BasePolicy>
     <TenantId>litware369b2c.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_TrustFrameworkBaseVC</PolicyId>
+    <PolicyId>B2C_1A_TrustFrameworkBase</PolicyId>
   </BasePolicy>
   <BuildingBlocks>
     <ContentDefinitions>
